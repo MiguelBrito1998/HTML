@@ -1,0 +1,164 @@
+
+/* Segunda clase CSS*/
+
+p {
+         color: aqua;
+         border: 5px solid blue;
+         background-color: rgb(182, 0, 0);
+         margin:50px 100px 50px 100px;
+         text-transform: uppercase;
+         padding: 30px;
+         width: 50px;
+         text-shadow: 20px 20px 10px white;
+         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+         font-size: 90%;
+         
+         position: sticky;
+}
+ h1{
+    display: inline;
+   
+ }
+body{
+
+    background-color:red;
+}
+     /*Pseudo-Clases*/
+    
+    button:hover{
+        background-color: blue;
+     }
+
+    /*pagina sin visitar*/
+     a:link{
+    color:rgb(25, 126, 11);
+    font-size: large;
+    }
+
+     /*pagina visitada*/
+    a:visited{
+    color:rgb(0, 17, 255);
+    font-size: 100px;
+    }
+
+    /*click en el enlace*/
+    a:active{
+    color:rgb(49, 0, 39);
+    font-size: 200px;
+    
+    }
+    
+    a{
+        text-decoration: none;
+    }
+         
+    p::first-letter{
+        font-size: 70px;
+        color: blueviolet;
+    }
+    P::first-line{
+        color: black;
+    }
+    
+    /*transiciones*/
+
+    button{
+        width: 500px;
+        height: 500px;
+        transition: width 10s, height 5s;
+    }
+
+    button:hover{
+        width: 250px;
+        height: 250px;
+    }
+
+
+    /*Animaciones*/
+    .example{
+        background-color: red;
+        animation-name: Miguel ;
+        animation-duration: 5s;
+    }
+    @keyframes Miguel{
+        from{background-color: red;}
+        to{background-color: blue;}
+    }
+
+  #Animacion{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    background-color: green;
+    animation-name: Moverse;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    
+  }
+
+    @keyframes Moverse{
+        0%{left:0 ; top: 0; background-color: blue}
+        25%{left:200px ; top: 0; background-color: brown}
+        50%{left:200px; top: 100px; background-color: darkolivegreen}
+        75%{left:500px; top: 1000px; background-color: gold}
+        100%{left:0 ; top: 0; background-color: lightcoral}
+
+
+    }
+
+    .example{
+        /*display: grid;
+        grid-template-columns:1fr 1fr ;
+        justify-items: center;
+        justify-content: center;
+        align-content: center;
+        text-align: center;*/
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+
+ /* Extra small devices (phones, 600px and down) */
+ @media only screen and (max-width: 600px) {
+   .example{
+      background-color: red;
+      grid-template-columns:1fr ;
+   }
+ }
+
+ /* Small devices (portrait tablets and large phones, 600px and up) */
+ @media only screen and (min-width: 600px) {
+    .example{
+        background-color:rgba(0, 32, 15, 0.44);
+        grid-template-columns:1fr ;
+     }
+
+ }
+ 
+ /* Medium devices (landscape tablets, 768px and up) */
+ @media only screen and (min-width: 768px) {
+    .example{
+        background-color: rgb(25, 126, 11);
+        grid-template-columns:1fr 1fr ;
+     }
+
+ }
+ 
+ /* Large devices (laptops/desktops, 992px and up) */
+ @media only screen and (min-width: 992px) {
+    .example{
+        background-color: rgb(75, 1, 85);
+        grid-template-columns:1fr 1fr ;
+     }
+
+ }
+ 
+ /* Extra large devices (large laptops and desktops, 1200px and up) */
+ @media only screen and (min-width: 1200px) {
+    .example{
+        background-color: rgb(13, 0, 44);
+        grid-template-columns:1fr 1fr ;
+    }
+
+ } 
